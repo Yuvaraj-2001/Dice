@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 sided dice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body style="background-color: black;">
+
+    <div class="jumbotron text-center" style="background-color: blue;  color: white;">
+    <h2>Six sided dice page</h2>
+    <br>
+    <button onclick="location.href = 'index.html'" class="btn btn-dark">Back to home</button>
+    </div>
+    
+    <div class="container">
+     <div class="row">  
+         <img id="myImg" style="margin-left: 45%;" src="dice_img/0.jpg" width="107" height="98">
+      </div>
+    
+    <button class="btn btn-primary w-100" style="border: 5px solid black; margin-top: 10px;" onclick="myFunction();">Throw dice</button><br>
+    <button class="btn btn-primary w-100" style=" border: 5px solid black; margin-top: 10px;"  onclick="defaulter();">Refresh the dice</button>
+   </div>
+   <hr>
+   <div class="col-sm-12" >
+    <div style="margin-top: 15px; border: white solid 5px; border-radius: 5px; padding-top: 15px; padding-left: 15px;"">
+    <h3>why need refresh button?</h3>
+    <p>So that you won't get confuse and you can also refresh and give to others!</p>
+    
+    </div>
+  </div>
+    <script>
+    function myFunction() {
+        var x = Math.floor((Math.random() * 6) + 1);
+        if(x == 1){
+          document.getElementById("myImg").src ='dice_img/1.jpg';    
+        }else if(x == 2){
+          document.getElementById("myImg").src ='dice_img/2.jpg';
+        }else if(x == 3){
+            document.getElementById("myImg").src ='dice_img/3.jpg';
+        }else if(x == 4){
+            document.getElementById("myImg").src ='dice_img/4.jpg';
+        }else if(x == 5){
+            document.getElementById("myImg").src ='dice_img/5.jpg';
+        }else{
+            document.getElementById("myImg").src ='dice_img/6.jpg';  
+        }
+    };
+    function defaulter() {
+
+            document.getElementById("myImg").src ='dice_img/0.jpg';
+    }
+    </script>
+
+</body>
+</html>
